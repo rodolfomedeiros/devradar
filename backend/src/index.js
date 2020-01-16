@@ -1,12 +1,12 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const routes = require('./routes')
+const routes = require('./routes');
 
-const mongodb = require('../config').MONGODB;
+const MONGODB = require('../config').MONGODB;
 
 const app = express();
 
-mongoose.connect(mongodb, {
+mongoose.connect(MONGODB, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
